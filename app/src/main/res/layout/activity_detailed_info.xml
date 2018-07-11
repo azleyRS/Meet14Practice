@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="weatherday"
+            type="com.example.rus.meet14practice.WeatherDay"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/detailed_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{weatherday.getDateString()}"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/detailed_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Avg temp in Moscow = ` + weatherday.getTemp()}"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/min_max_temp"
+            android:text="@{`Min temp = ` + weatherday.getTempMin() + `\n` + `Max Temp = ` + weatherday.getTempMax()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:text="@{`Pressure = ` + weatherday.getPressureString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sea_level"
+            android:text="@{`Sea level = ` + weatherday.getSea_levelString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/grnd_lvl"
+            android:text="@{`Ground level = ` + weatherday.getGrnd_levelString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:text="@{`Humidity = ` + weatherday.getHumidityString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/temp_kd"
+            android:text="@{`Temp kf = ` + weatherday.getTemp_kfString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>
